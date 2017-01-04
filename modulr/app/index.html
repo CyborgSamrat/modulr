@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Modulr</title>
+	<meta charset="utf-8" />
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+
+    <script src="app.js"></script>
+    <script src="modules/main/controllers/index.controller.js"></script>
+    <script src="modules/sample/controllers/sample.controller.js"></script>
+
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+   </head>
+<body ng-app="modulr">
+    <div ng-controller="indexController">
+        <h2>{{hello}}</h2>
+        <div ui-view></div>
+        <a ui-sref="sample" ui-sref-active="active">Sample</a>
+        
+    </div>
+</body>
+</html>
